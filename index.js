@@ -41,6 +41,57 @@ const serials = {
     }
 }
 
+const getRandomSceneFull = async (chatId) => {
+    const randomSerial = getRandomInt(0, Object.keys(serials).length - 1);
+    const type = Object.keys(serials)[randomSerial];
+
+    const techMsg = await bot.sendMessage(chatId, `Открываю список серий для ${type}`);
+    const techMsgId = techMsg.message_id;
+
+    let content;
+    let dom;
+    let url = [mainUrl, serials[type].url, serials[type].episodesUrl].join('/');
+
+    content = await loadPage(url);
+    dom = HTMLParser.parse(content);
+
+    const links = dom.querySelectorAll(serials[type].querySelector);
+    const randomLink = getRandomInt(0, links.length - 1);
+    const hrefAttribute = links[randomLink].getAttribute('href');
+    const name = links[randomLink].textContent;
+
+    url = [mainUrl, serials[type].url, hrefAttribute].join('/');
+
+    console.log(`Для чат айди ${chatId} выбрана серия ${name} ${url}`);
+    bot.editMessageText(`Выбрал случайную серию ${type} ${name}`, { chat_id: chatId, message_id: techMsgId });
+
+    bot.sendMessage(chatId, `<b>Сериал: ${serials[type].name}</b>\n<a href="${url}">${name}</a>`, { parse_mode: 'HTML' })
+
+    content = await loadPage(url);
+    dom = HTMLParser.parse(content);
+
+    const scenes = dom.querySelectorAll('td[width="85%"] p');
+
+    bot.editMessageText(`Выбрал случайную сцену`, { chat_id: chatId, message_id: techMsgId });
+
+    let randomScene, randomSceneText;
+    let i = 0;
+
+    do {
+        randomScene = getRandomInt(0, scenes.length - 1);
+        randomSceneText = scenes[randomScene].textContent.trim().substring(0, 2048);
+
+        if (randomSceneText === '') {
+            scenes.splice(randomScene, 1)
+        }
+
+        bot.editMessageText(`Ищу случайный абзац ${i + 1} раз`, { chat_id: chatId, message_id: techMsgId });
+        i++;
+    } while (randomSceneText === '' && i < 5)
+
+    bot.sendMessage(chatId, randomSceneText);
+}
+
 bot.onText(/\/start/, async (msg) => {
     const chatId = msg.chat.id;
     console.log(`Сделан запрос start от чат айди ${chatId}`);
@@ -70,59 +121,24 @@ bot.onText(/\/start/, async (msg) => {
     }
 })
 
+bot.on('callback_query', function onCallbackQuery(callbackQuery) {
+    const action = callbackQuery.data;
+    const msg = callbackQuery.message;
+    const chatId = msg.chat.id;
+    // message_id: msg.message_id,
+
+    if (action === 'rand') {
+        getRandomSceneFull(chatId);
+    }
+
+    return bot.answerCallbackQuery(callbackQuery.id);
+});
 
 bot.onText(/\/rand/, async (msg) => {
     const chatId = msg.chat.id;
     console.log(`Сделан запрос rand от чат айди ${chatId}`);
     try {
-        const randomSerial = getRandomInt(0, Object.keys(serials).length - 1);
-        const type = Object.keys(serials)[randomSerial];
-
-        const techMsg = await bot.sendMessage(chatId, `Открываю список серий для ${type}`);
-        const techMsgId = techMsg.message_id;
-
-        let content;
-        let dom;
-        let url = [mainUrl, serials[type].url, serials[type].episodesUrl].join('/');
-
-        content = await loadPage(url);
-        dom = HTMLParser.parse(content);
-
-        const links = dom.querySelectorAll(serials[type].querySelector);
-        const randomLink = getRandomInt(0, links.length - 1);
-        const hrefAttribute = links[randomLink].getAttribute('href');
-        const name = links[randomLink].textContent;
-
-        url = [mainUrl, serials[type].url, hrefAttribute].join('/');
-
-        console.log(`Для чат айди ${chatId} выбрана серия ${name} ${url}`);
-        bot.editMessageText(`Выбрал случайную серию ${type} ${name}`, { chat_id: chatId, message_id: techMsgId });
-
-        bot.sendMessage(chatId, `<b>Сериал: ${serials[type].name}</b>\n<a href="${url}">${name}</a>`, { parse_mode: 'HTML' })
-
-        content = await loadPage(url);
-        dom = HTMLParser.parse(content);
-
-        const scenes = dom.querySelectorAll('td[width="85%"] font');
-
-        bot.editMessageText(`Выбрал случайную сцену`, { chat_id: chatId, message_id: techMsgId });
-
-        let randomScene, randomSceneText;
-        let i = 0;
-
-        do {
-            randomScene = getRandomInt(0, scenes.length - 1);
-            randomSceneText = scenes[randomScene].textContent.trim().substring(0, 2048);
-
-            if (randomSceneText === '') {
-                scenes.splice(randomScene, 1)
-            }
-
-            bot.editMessageText(`Ищу случайный абзац ${i + 1} раз`, { chat_id: chatId, message_id: techMsgId });
-            i++;
-        } while (randomSceneText === '' && i < 5)
-
-        bot.sendMessage(chatId, randomSceneText);
+        getRandomSceneFull(chatId);
     } catch (error) {
         bot.sendMessage(chatId, 'Ой! Что-то случилось! Может, попробуете еще раз?');
         console.log(`Ошибка в чате ${chatId}\n${error}`);
