@@ -10,40 +10,41 @@ const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 const mainUrl = 'http://www.chakoteya.net';
 const serials = {
     'TOS': {
-        name: 'TOS+AOS',
+        name: 'The Original Series + Animated Original Series',
         url: 'StarTrek',
         episodesUrl: 'episodes.htm',
-        querySelector: 'td[width="44%"] a',
+        querySelector: 'td[width="44%"] a[href]',
     },
     'TNG': {
-        name: 'TNG',
+        name: 'The Next Generation',
         url: 'NextGen',
         episodesUrl: 'episodes.htm',
-        querySelector: 'td[width="44%"] a',
+        querySelector: 'td[width="44%"] a[href]',
     },
     'DS9': {
-        name: 'DS9',
+        name: 'Deep Space 9',
         url: 'DS9',
         episodesUrl: 'episodes.htm',
-        querySelector: 'td[width="44%"] a',
+        querySelector: 'td[width="44%"] a[href]',
     },
     'VOY': {
-        name: 'VOY',
+        name: 'Voyager',
         url: 'Voyager',
         episodesUrl: 'episode_listing.htm',
-        querySelector: 'h2 + div > table a',
+        querySelector: 'h2 + div > table a[href]',
     },
     'ENT': {
-        name: 'ENT',
+        name: 'Enterprise',
         url: 'Enterprise',
         episodesUrl: 'episodes.htm',
-        querySelector: 'td[width="44%"] a',
+        querySelector: 'td[width="44%"] a[href]',
     }
 }
 
 const getRandomSceneFull = async (chatId) => {
     const randomSerial = getRandomInt(0, Object.keys(serials).length - 1);
-    const type = Object.keys(serials)[randomSerial];
+    // const type = Object.keys(serials)[randomSerial];
+    const type = 'TOS'
 
     const techMsg = await bot.sendMessage(chatId, `Открываю список серий для ${type}`);
     const techMsgId = techMsg.message_id;
@@ -51,21 +52,29 @@ const getRandomSceneFull = async (chatId) => {
     let content;
     let dom;
     let url = [mainUrl, serials[type].url, serials[type].episodesUrl].join('/');
-
+    
     content = await loadPage(url);
     dom = HTMLParser.parse(content);
-
+    
     const links = dom.querySelectorAll(serials[type].querySelector);
     const randomLink = getRandomInt(0, links.length - 1);
     const hrefAttribute = links[randomLink].getAttribute('href');
-    const name = links[randomLink].textContent;
-
+    const name = links[randomLink].textContent.replace(/[\n\r]/g,' ');
+    
     url = [mainUrl, serials[type].url, hrefAttribute].join('/');
 
-    console.log(`Для чат айди ${chatId} выбрана серия ${name} ${url}`);
+    console.log(`Для чат айди ${chatId} выбрана серия ${name} ${url} (${randomLink})`);
     bot.editMessageText(`Выбрал случайную серию ${type} ${name}`, { chat_id: chatId, message_id: techMsgId });
 
-    bot.sendMessage(chatId, `<b>Сериал: ${serials[type].name}</b>\n<a href="${url}">${name}</a>`, { parse_mode: 'HTML' })
+    const text = [
+        `${serials[type].name}`,
+        `<b>Сезон:</b>`,  
+        `<b>Серия:</b>`,  
+        `<b>Название:</b> ${name}`,  
+        `<a href="${url}"><b>Транскрипт</b></a>`,  
+    ];
+
+    bot.sendMessage(chatId, text.join('\n'), { parse_mode: 'HTML' })
 
     content = await loadPage(url);
     dom = HTMLParser.parse(content);
