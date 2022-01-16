@@ -21,25 +21,55 @@ const serials = {
         episodesUrl: 'episodes.htm',
         querySelector: 'td[width="44%"] a',
     },
-    'DS9':  {
+    'DS9': {
         name: 'DS9',
         url: 'DS9',
         episodesUrl: 'episodes.htm',
         querySelector: 'td[width="44%"] a',
     },
-    'VOY':  {
+    'VOY': {
         name: 'VOY',
         url: 'Voyager',
         episodesUrl: 'episode_listing.htm',
         querySelector: 'h2 + div > table a',
     },
-    'ENT':  {
+    'ENT': {
         name: 'ENT',
         url: 'Enterprise',
         episodesUrl: 'episodes.htm',
         querySelector: 'td[width="44%"] a',
     }
 }
+
+bot.onText(/\/start/, async (msg) => {
+    const chatId = msg.chat.id;
+    console.log(`Сделан запрос start от чат айди ${chatId}`);
+    try {
+        bot.sendMessage(
+            chatId,
+            'Привет! Давай погадаем? Загадывай вопрос, я начинаю искать то, что подходит тебе среди сериалов Star Trek.',
+            {
+                reply_markup: {
+                    resize_keyboard: true,
+                    one_time_keyboard: true,
+                    inline_keyboard: [
+                        [
+                            {
+                                text: 'Поехали!',
+                                callback_data: 'rand'
+                            }
+                        ]
+                    ]
+                },
+            }
+        );
+
+    } catch (error) {
+        bot.sendMessage(chatId, 'Ой! Что-то случилось! Может, попробуете еще раз?');
+        console.log(`Ошибка в чате ${chatId}\n${error}`);
+    }
+})
+
 
 bot.onText(/\/rand/, async (msg) => {
     const chatId = msg.chat.id;
@@ -62,7 +92,7 @@ bot.onText(/\/rand/, async (msg) => {
         const randomLink = getRandomInt(0, links.length - 1);
         const hrefAttribute = links[randomLink].getAttribute('href');
         const name = links[randomLink].textContent;
-        
+
         url = [mainUrl, serials[type].url, hrefAttribute].join('/');
 
         console.log(`Для чат айди ${chatId} выбрана серия ${name} ${url}`);
