@@ -68,8 +68,8 @@ const getRandomSceneFull = async (chatId) => {
 
     const text = [
         `${serials[type].name}`,
-        `<b>Сезон:</b>`,  
-        `<b>Серия:</b>`,  
+        // `<b>Сезон:</b>`,  
+        // `<b>Серия:</b>`,  
         `<b>Название:</b> ${name}`,  
         `<a href="${url}"><b>Транскрипт</b></a>`,  
     ];
