@@ -6,79 +6,98 @@
             [
                 {
                     "name": "The Cage",
-                    "link": "1.htm"
+                    "link": "1.htm",
+                    "screencapsAlbumId": "157"
                 },
                 {
                     "name": "The Man Trap",
-                    "link": "6.htm"
+                    "link": "6.htm",
+                    "screencapsAlbumId": "33"
                 },
                 {
                     "name": "Charlie X",
-                    "link": "8.htm"
+                    "link": "8.htm",
+                    "screencapsAlbumId": "16"
                 },
                 {
                     "name": "Where No Man Has Gone Before",
-                    "link": "2.htm"
+                    "link": "2.htm",
+                    "screencapsAlbumId": "8"
                 },
                 {
                     "name": "The Naked Time",
-                    "link": "7.htm"
+                    "link": "7.htm",
+                    "screencapsAlbumId": "18"
                 },
                 {
                     "name": "The Enemy Within",
-                    "link": "5.htm"
+                    "link": "5.htm",
+                    "screencapsAlbumId": "12"
                 },
                 {
                     "name": "Mudd's Women",
-                    "link": "4.htm"
+                    "link": "4.htm",
+                    "screencapsAlbumId": "25"
                 },
                 {
                     "name": "What Are Little Girls Made Of?",
-                    "link": "10.htm"
+                    "link": "10.htm",
+                    "screencapsAlbumId": "13"
                 },
                 {
                     "name": "Miri",
-                    "link": "12.htm"
+                    "link": "12.htm",
+                    "screencapsAlbumId": "28"
                 },
                 {
                     "name": "Dagger Of The Mind",
-                    "link": "11.htm"
+                    "link": "11.htm",
+                    "screencapsAlbumId": "15"
                 },
                 {
                     "name": "The Corbomite Maneuver",
-                    "link": "3.htm"
+                    "link": "3.htm",
+                    "screencapsAlbumId": "30"
                 },
                 {
                     "name": "The Menagerie, part 1",
-                    "link": "16.htm"
+                    "link": "16.htm",
+                    "screencapsAlbumId": "6"
                 },
                 {
                     "name": "The Menagerie, part 2",
-                    "link": "16b.htm"
+                    "link": "16b.htm",
+                    "screencapsAlbumId": "26"
                 },
                 {
                     "name": "The Conscience of the King",
-                    "link": "13.htm"
+                    "link": "13.htm",
+                    "screencapsAlbumId": "21"
                 },
                 {
                     "name": "Balance of Terror",
-                    "link": "9.htm"
+                    "link": "9.htm",
+                    "screencapsAlbumId": "29"
                 },
                 {
                     "name": "Shore Leave",
-                    "link": "17.htm"
+                    "link": "17.htm",
+                    "screencapsAlbumId": "19"
                 },
                 {
                     "name": "The Galileo Seven",
-                    "link": "14.htm"
+                    "link": "14.htm",
+                    "screencapsAlbumId": "14"
                 },
                 {
                     "name": "The Squire of Gothos",
-                    "link": "18.htm"
+                    "link": "18.htm",
+                    "screencapsAlbumId": "9"
                 },
                 {
                     "name": "Arena",
-                    "link": "19.htm"
+                    "link": "19.htm",
+                    "screencapsAlbumId": "31"
                 },
                 {
                     "name": "Tomorrow is Yesterday",
@@ -86,247 +105,307 @@
                 },
                 {
                     "name": "Court Martial",
-                    "link": "15.htm"
+                    "link": "15.htm",
+                    "screencapsAlbumId": "32"
                 },
                 {
                     "name": "The Return of The Archons",
-                    "link": "22.htm"
+                    "link": "22.htm",
+                    "screencapsAlbumId": "27"
                 },
                 {
                     "name": "Space Seed",
-                    "link": "24.htm"
+                    "link": "24.htm",
+                    "screencapsAlbumId": "7"
                 },
                 {
                     "name": "A Taste of Armageddon",
-                    "link": "23.htm"
+                    "link": "23.htm",
+                    "screencapsAlbumId": "17"
                 },
                 {
                     "name": "This Side of Paradise",
-                    "link": "25.htm"
+                    "link": "25.htm",
+                    "screencapsAlbumId": "22"
                 },
                 {
                     "name": "The Devil in the Dark",
-                    "link": "26.htm"
+                    "link": "26.htm",
+                    "screencapsAlbumId": "5"
                 },
                 {
                     "name": "Errand of Mercy",
-                    "link": "27.htm"
+                    "link": "27.htm",
+                    "screencapsAlbumId": "10"
                 },
                 {
                     "name": "The Alternative Factor",
-                    "link": "20.htm"
+                    "link": "20.htm",
+                    "screencapsAlbumId": "24"
                 },
                 {
                     "name": "The City on the Edge of Forever",
-                    "link": "28.htm"
+                    "link": "28.htm",
+                    "screencapsAlbumId": "11"
                 },
                 {
                     "name": "Operation: Annihilate!",
-                    "link": "29.htm"
+                    "link": "29.htm",
+                    "screencapsAlbumId": "20"
                 }
             ],
             [
                 {
                     "name": "Amok Time",
-                    "link": "34.htm"
+                    "link": "34.htm",
+                    "screencapsAlbumId": "35"
                 },
                 {
                     "name": "Who Mourns For Adonais?",
-                    "link": "33.htm"
+                    "link": "33.htm",
+                    "screencapsAlbumId": "65"
                 },
                 {
                     "name": "The Changeling",
-                    "link": "37.htm"
+                    "link": "37.htm",
+                    "screencapsAlbumId": "42"
                 },
                 {
                     "name": "Mirror, Mirror",
-                    "link": "39.htm"
+                    "link": "39.htm",
+                    "screencapsAlbumId": "47"
                 },
                 {
                     "name": "The Apple",
-                    "link": "38.htm"
+                    "link": "38.htm",
+                    "screencapsAlbumId": "50"
                 },
                 {
                     "name": "The Doomsday Machine",
-                    "link": "35.htm"
+                    "link": "35.htm",
+                    "screencapsAlbumId": "133"
                 },
                 {
                     "name": "Catspaw",
-                    "link": "30.htm"
+                    "link": "30.htm",
+                    "screencapsAlbumId": "132"
                 },
                 {
                     "name": "I, Mudd",
-                    "link": "41.htm"
+                    "link": "41.htm",
+                    "screencapsAlbumId": "134"
                 },
                 {
                     "name": "Metamorphosis",
-                    "link": "31.htm"
+                    "link": "31.htm",
+                    "screencapsAlbumId": "135"
                 },
                 {
                     "name": "Journey to Babel",
-                    "link": "44.htm"
+                    "link": "44.htm",
+                    "screencapsAlbumId": "60"
                 },
                 {
                     "name": "Friday's Child",
-                    "link": "32.htm"
+                    "link": "32.htm",
+                    "screencapsAlbumId": "137"
                 },
                 {
                     "name": "The Deadly Years",
-                    "link": "40.htm"
+                    "link": "40.htm",
+                    "screencapsAlbumId": "138"
                 },
                 {
                     "name": "Obsession",
-                    "link": "47.htm"
+                    "link": "47.htm",
+                    "screencapsAlbumId": "139"
                 },
                 {
                     "name": "Wolf in the Fold",
-                    "link": "36.htm"
+                    "link": "36.htm",
+                    "screencapsAlbumId": "140"
                 },
                 {
                     "name": "The Trouble With Tribbles",
-                    "link": "42.htm"
+                    "link": "42.htm",
+                    "screencapsAlbumId": "66"
                 },
                 {
                     "name": "The Gamesters of Triskelion",
-                    "link": "46.htm"
+                    "link": "46.htm",
+                    "screencapsAlbumId": "141"
                 },
                 {
                     "name": "A Piece of the Action",
-                    "link": "49.htm"
+                    "link": "49.htm",
+                    "screencapsAlbumId": "142"
                 },
                 {
                     "name": "The Immunity Syndrome",
-                    "link": "48.htm"
+                    "link": "48.htm",
+                    "screencapsAlbumId": "143"
                 },
                 {
                     "name": "A Private Little War",
-                    "link": "45.htm"
+                    "link": "45.htm",
+                    "screencapsAlbumId": "144"
                 },
                 {
                     "name": "Return to Tomorrow",
-                    "link": "51.htm"
+                    "link": "51.htm",
+                    "screencapsAlbumId": "145"
                 },
                 {
                     "name": "Patterns Of Force",
-                    "link": "52.htm"
+                    "link": "52.htm",
+                    "screencapsAlbumId": "146"
                 },
                 {
                     "name": "By Any Other Name",
-                    "link": "50.htm"
+                    "link": "50.htm",
+                    "screencapsAlbumId": "147"
                 },
                 {
                     "name": "The Omega Glory",
-                    "link": "54.htm"
+                    "link": "54.htm",
+                    "screencapsAlbumId": "148"
                 },
                 {
                     "name": "The Ultimate Computer",
-                    "link": "53.htm"
+                    "link": "53.htm",
+                    "screencapsAlbumId": "39"
                 },
                 {
                     "name": "Bread and Circuses",
-                    "link": "43.htm"
+                    "link": "43.htm",
+                    "screencapsAlbumId": "149"
                 },
                 {
                     "name": "Assignment: Earth",
-                    "link": "55.htm"
+                    "link": "55.htm",
+                    "screencapsAlbumId": "46"
                 }
             ],
             [
                 {
                     "name": "Spock's Brain",
-                    "link": "61.htm"
+                    "link": "61.htm",
+                    "screencapsAlbumId": "123"
                 },
                 {
                     "name": "The Enterprise Incident",
-                    "link": "59.htm"
+                    "link": "59.htm",
+                    "screencapsAlbumId": "90"
                 },
                 {
                     "name": "The Paradise Syndrome",
-                    "link": "58.htm"
+                    "link": "58.htm",
+                    "screencapsAlbumId": "124"
                 },
                 {
                     "name": "And The Children Shall Lead",
-                    "link": "60.htm"
+                    "link": "60.htm",
+                    "screencapsAlbumId": "125"
                 },
                 {
                     "name": "Is There In Truth No Beauty?",
-                    "link": "62.htm"
+                    "link": "62.htm",
+                    "screencapsAlbumId": "126"
                 },
                 {
                     "name": "Spectre of the Gun",
-                    "link": "56.htm"
+                    "link": "56.htm",
+                    "screencapsAlbumId": "127"
                 },
                 {
                     "name": "The Day of the Dove",
-                    "link": "66.htm"
+                    "link": "66.htm",
+                    "screencapsAlbumId": "85"
                 },
                 {
                     "name": "For The World Is Hollow...",
-                    "link": "65.htm"
+                    "link": "65.htm",
+                    "screencapsAlbumId": "74"
                 },
                 {
                     "name": "The Tholian Web",
-                    "link": "64.htm"
+                    "link": "64.htm",
+                    "screencapsAlbumId": "130"
                 },
                 {
                     "name": "Plato's Stepchildren",
-                    "link": "67.htm"
+                    "link": "67.htm",
+                    "screencapsAlbumId": "75"
                 },
                 {
                     "name": "Wink of an Eye",
-                    "link": "68.htm"
+                    "link": "68.htm",
+                    "screencapsAlbumId": "114"
                 },
                 {
                     "name": "The Empath",
-                    "link": "63.htm"
+                    "link": "63.htm",
+                    "screencapsAlbumId": "115"
                 },
                 {
                     "name": "Elaan of Troyius",
-                    "link": "57.htm"
+                    "link": "57.htm",
+                    "screencapsAlbumId": "116"
                 },
                 {
                     "name": "Whom Gods Destroy",
-                    "link": "71.htm"
+                    "link": "71.htm",
+                    "screencapsAlbumId": "82"
                 },
                 {
                     "name": "Let That Be Your Last Battlefield",
-                    "link": "70.htm"
+                    "link": "70.htm",
+                    "screencapsAlbumId": "117"
                 },
                 {
                     "name": "The Mark of Gideon",
-                    "link": "72.htm"
+                    "link": "72.htm",
+                    "screencapsAlbumId": "118"
                 },
                 {
                     "name": "That Which Survives",
-                    "link": "69.htm"
+                    "link": "69.htm",
+                    "screencapsAlbumId": "119"
                 },
                 {
                     "name": "The Lights of Zetar",
-                    "link": "73.htm"
+                    "link": "73.htm",
+                    "screencapsAlbumId": "120"
                 },
                 {
                     "name": "Requiem for Methuselah",
-                    "link": "76.htm"
+                    "link": "76.htm",
+                    "screencapsAlbumId": "121"
                 },
                 {
                     "name": "The Way to Eden",
-                    "link": "75.htm"
+                    "link": "75.htm",
+                    "screencapsAlbumId": "122"
                 },
                 {
                     "name": "The Cloud Minders",
-                    "link": "74.htm"
+                    "link": "74.htm",
+                    "screencapsAlbumId": "111"
                 },
                 {
                     "name": "The Savage Curtain",
-                    "link": "77.htm"
+                    "link": "77.htm",
+                    "screencapsAlbumId": "91"
                 },
                 {
                     "name": "All Our Yesterdays",
-                    "link": "78.htm"
+                    "link": "78.htm",
+                    "screencapsAlbumId": "112"
                 },
                 {
                     "name": "Turnabout Intruder",
-                    "link": "79.htm"
+                    "link": "79.htm",
+                    "screencapsAlbumId": "113"
                 }
             ]
         ]
