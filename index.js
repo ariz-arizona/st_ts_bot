@@ -12,10 +12,14 @@ const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 const mainUrl = 'http://www.chakoteya.net';
 const screencapsUrl = 'https://tos.star-trek.info';
 
-const getRandomSceneFull = async (chatId) => {
-    const randomSerial = getRandomInt(0, Object.keys(serials).length - 1);
-    // const type = Object.keys(serials)[randomSerial];
-    const type = 'TOS'
+const getRandomSceneFull = async (chatId, randomSerial = false) => {
+    // const randomSerial = getRandomInt(0, Object.keys(serials).length - 1);
+    let type = Object.keys(serials)[getRandomInt(0, Object.keys(serials).length - 1)];
+    if (randomSerial && Object.keys(serials).includes(randomSerial)) {
+        type = randomSerial;
+    }
+    // const type = randomSerial || Object.keys(serials)[getRandomInt(0, Object.keys(serials).length - 1)];
+    // const type = 'TOS'
 
     const techMsg = await bot.sendMessage(chatId, `Открываю список серий для ${type}`);
     const techMsgId = techMsg.message_id;
@@ -147,7 +151,7 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
     // message_id: msg.message_id,
 
     if (action === 'rand') {
-        getRandomSceneFull(chatId);
+        getRandomSceneFull(chatId,);
     }
 
     if (action.indexOf('screencaps_') === 0) {
@@ -158,10 +162,16 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 });
 
 bot.onText(/\/rand/, async (msg) => {
+    console.log(msg)
     const chatId = msg.chat.id;
+    const text = msg.text;
     console.log(`Сделан запрос rand от чат айди ${chatId}`);
     try {
-        getRandomSceneFull(chatId);
+        let type;
+        if (text.split(' ').length > 1) {
+            type = text.split(' ')[1];
+        }
+        getRandomSceneFull(chatId, type);
     } catch (error) {
         bot.sendMessage(chatId, 'Ой! Что-то случилось! Может, попробуете еще раз?');
         console.log(`Ошибка в чате ${chatId}\n${error}`);
