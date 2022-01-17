@@ -13,13 +13,10 @@ const mainUrl = 'http://www.chakoteya.net';
 const screencapsUrl = 'https://tos.star-trek.info';
 
 const getRandomSceneFull = async (chatId, randomSerial = false) => {
-    // const randomSerial = getRandomInt(0, Object.keys(serials).length - 1);
     let type = Object.keys(serials)[getRandomInt(0, Object.keys(serials).length - 1)];
     if (randomSerial && Object.keys(serials).includes(randomSerial)) {
         type = randomSerial;
     }
-    // const type = randomSerial || Object.keys(serials)[getRandomInt(0, Object.keys(serials).length - 1)];
-    // const type = 'TOS'
 
     const techMsg = await bot.sendMessage(chatId, `Открываю список серий для ${type}`);
     const techMsgId = techMsg.message_id;
