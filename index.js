@@ -10,10 +10,12 @@ const { BOT_TOKEN } = process.env;
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 
 const mainUrl = 'http://www.chakoteya.net';
+const screencapsUrl = 'https://tos.star-trek.info';
 
 const getRandomSceneFull = async (chatId) => {
     const randomSerial = getRandomInt(0, Object.keys(serials).length - 1);
-    const type = Object.keys(serials)[randomSerial];
+    // const type = Object.keys(serials)[randomSerial];
+    const type = 'TOS'
 
     const techMsg = await bot.sendMessage(chatId, `Открываю список серий для ${type}`);
     const techMsgId = techMsg.message_id;
@@ -66,9 +68,47 @@ const getRandomSceneFull = async (chatId) => {
 
         bot.editMessageText(`Ищу случайный абзац ${i + 1} раз (${randomScene})`, { chat_id: chatId, message_id: techMsgId });
         i++;
-    } while (randomSceneText === '' && i < 5)
+    } while (randomSceneText === '' && i < 5);
 
-    bot.sendMessage(chatId, randomSceneText, {parse_mode: 'HTML'});
+    const opts = { parse_mode: 'HTML' };
+
+    if (link.screencapsAlbumId) {
+        opts.reply_markup = {
+            resize_keyboard: true,
+            one_time_keyboard: true,
+            inline_keyboard: [
+                [
+                    {
+                        text: 'Можно поточнее?',
+                        callback_data: `screencaps_${link.screencapsAlbumId}`
+                    }
+                ]
+            ]
+        }
+    }
+
+
+    bot.sendMessage(chatId, randomSceneText, opts);
+}
+
+const getScreencaps = async (chatId, screencapsId) => {
+    let techMsg = await bot.sendMessage(chatId, screencapsId);
+
+    let content = await loadPage(`${screencapsUrl}/thumbnails.php?album=${screencapsId}`);
+    let dom = HTMLParser.parse(content);
+    const pagesCount = parseInt(dom.querySelector('.navmenu:nth-last-child(2)').textContent);
+    const randomPage = getRandomInt(1, pagesCount);
+
+    content = await loadPage(`${screencapsUrl}/thumbnails.php?album=${screencapsId}&page=${randomPage}`);
+    dom = HTMLParser.parse(content);
+
+    const images = dom.querySelectorAll('.image.thumbnail');
+    const randomImg = images[getRandomInt(0, images.length - 1)];
+    const src = randomImg.getAttribute('src').replace('thumb_', '').replace('https', 'http');
+
+    bot.editMessageText(`${src}`, { chat_id: chatId, message_id: techMsg.message_id })
+
+    bot.sendPhoto(chatId, `${screencapsUrl}/${src}`);
 }
 
 bot.onText(/\/start/, async (msg) => {
@@ -108,6 +148,10 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 
     if (action === 'rand') {
         getRandomSceneFull(chatId);
+    }
+
+    if (action.indexOf('screencaps_') === 0) {
+        getScreencaps(chatId, action.replace('screencaps_', ''))
     }
 
     return bot.answerCallbackQuery(callbackQuery.id);
