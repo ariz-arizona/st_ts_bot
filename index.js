@@ -19,26 +19,27 @@ const getRandomSceneFull = async (chatId) => {
     const techMsgId = techMsg.message_id;
 
     const links = serials[type].series;
-    const randomSeason = getRandomInt(0, Object.keys(links).length - 1)
+    const randomSeason = getRandomInt(0, (links.length - 1));
     const randomLink = getRandomInt(0, links[randomSeason].length - 1);
     const link = links[randomSeason][randomLink];
     const hrefAttribute = link.link;
     const name = link.name;
+    
+    let url = [mainUrl, serials[type].urlPrefix, hrefAttribute].join('/');
 
-    console.log(`Для чат айди ${chatId} выбрана серия ${name} ${url} (${randomLink})`);
+    console.log(`Для чат айди ${chatId} выбрана серия ${name} (${link} S${randomSeason}E${randomLink})`);
     bot.editMessageText(`Выбрал случайную серию ${type} ${name}`, { chat_id: chatId, message_id: techMsgId });
     
     const text = [
-        `${serials[type].name}`,
-        `<b>Сезон: ${randomSeason}</b>`,  
-        `<b>Серия:${randomLink}</b>`,  
+        `${serials[type].caption}`,
+        `<b>Сезон: ${randomSeason + 1}</b>`,  
+        `<b>Серия:${randomLink + 1}</b>`,  
         `<b>Название:</b> ${name}`,
         `<a href="${url}"><b>Транскрипт</b></a>`,
     ];
     
     bot.sendMessage(chatId, text.join('\n'), { parse_mode: 'HTML' })
     
-    let url = [mainUrl, serials[type].urlPrefix, hrefAttribute].join('/');
     let content = await loadPage(url);
     let dom = HTMLParser.parse(content);
 
