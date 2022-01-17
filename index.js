@@ -24,26 +24,26 @@ const getRandomSceneFull = async (chatId) => {
     const link = links[randomSeason][randomLink];
     const hrefAttribute = link.link;
     const name = link.name;
-    
+
     let url = [mainUrl, serials[type].urlPrefix, hrefAttribute].join('/');
 
-    console.log(`Для чат айди ${chatId} выбрана серия ${name} (${link} S${randomSeason}E${randomLink})`);
+    console.log(`Для чат айди ${chatId} выбрана серия ${name} (${hrefAttribute} ${name} S${randomSeason}E${randomLink})`);
     bot.editMessageText(`Выбрал случайную серию ${type} ${name}`, { chat_id: chatId, message_id: techMsgId });
-    
+
     const text = [
         `${serials[type].caption}`,
-        `<b>Сезон: ${randomSeason + 1}</b>`,  
-        `<b>Серия:${randomLink + 1}</b>`,  
+        `<b>Сезон: ${randomSeason + 1}</b>`,
+        `<b>Серия: ${randomLink + 1}</b>`,
         `<b>Название:</b> ${name}`,
         `<a href="${url}"><b>Транскрипт</b></a>`,
     ];
-    
+
     bot.sendMessage(chatId, text.join('\n'), { parse_mode: 'HTML' })
-    
+
     let content = await loadPage(url);
     let dom = HTMLParser.parse(content);
 
-    const scenes = dom.querySelectorAll('td[width="85%"] p');
+    const scenes = dom.querySelectorAll('td[width="85%"] > *');
 
     bot.editMessageText(`Выбрал случайную сцену`, { chat_id: chatId, message_id: techMsgId });
 
@@ -58,11 +58,17 @@ const getRandomSceneFull = async (chatId) => {
             scenes.splice(randomScene, 1)
         }
 
-        bot.editMessageText(`Ищу случайный абзац ${i + 1} раз`, { chat_id: chatId, message_id: techMsgId });
+        if (scenes[randomScene].querySelector('b') && scenes[randomScene + 1] !== undefined) {
+            randomSceneText = `<b>${randomSceneText}</b>\n${scenes[randomScene + 1].textContent}`;
+        } else if (scenes[randomScene - 1] !== undefined && scenes[randomScene - 1].querySelector('b')) {
+            randomSceneText = `<b>${scenes[randomScene - 1].textContent}</b>\n${randomSceneText}`;
+        }
+
+        bot.editMessageText(`Ищу случайный абзац ${i + 1} раз (${randomScene})`, { chat_id: chatId, message_id: techMsgId });
         i++;
     } while (randomSceneText === '' && i < 5)
 
-    bot.sendMessage(chatId, randomSceneText);
+    bot.sendMessage(chatId, randomSceneText, {parse_mode: 'HTML'});
 }
 
 bot.onText(/\/start/, async (msg) => {
