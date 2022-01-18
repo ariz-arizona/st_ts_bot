@@ -10,7 +10,7 @@ const { BOT_TOKEN } = process.env;
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 
 const mainUrl = 'http://www.chakoteya.net';
-const screencapsUrl = 'https://tos.star-trek.info';
+const screencapsUrl = 'star-trek.info';
 
 const getRandomSceneFull = async (chatId, randomSerial = false) => {
     let type = Object.keys(serials)[getRandomInt(0, Object.keys(serials).length - 1)];
@@ -81,7 +81,7 @@ const getRandomSceneFull = async (chatId, randomSerial = false) => {
                 [
                     {
                         text: 'Можно поточнее?',
-                        callback_data: `screencaps_${link.screencapsAlbumId}`
+                        callback_data: `screencaps_${link.screencapsAlbumId}_${type}`
                     }
                 ]
             ]
@@ -92,24 +92,30 @@ const getRandomSceneFull = async (chatId, randomSerial = false) => {
     bot.sendMessage(chatId, randomSceneText, opts);
 }
 
-const getScreencaps = async (chatId, screencapsId) => {
+const getScreencaps = async (chatId, screencapsId, type) => {
     let techMsg = await bot.sendMessage(chatId, screencapsId);
-
-    let content = await loadPage(`${screencapsUrl}/thumbnails.php?album=${screencapsId}`);
+    
+    let content = await loadPage(`https://${type}.${screencapsUrl}/thumbnails.php?album=${screencapsId}`);
     let dom = HTMLParser.parse(content);
     const pagesCount = parseInt(dom.querySelector('.navmenu:nth-last-child(2)').textContent);
     const randomPage = getRandomInt(1, pagesCount);
 
-    content = await loadPage(`${screencapsUrl}/thumbnails.php?album=${screencapsId}&page=${randomPage}`);
+    content = await loadPage(`https://${type}.${screencapsUrl}/thumbnails.php?album=${screencapsId}&page=${randomPage}`);
     dom = HTMLParser.parse(content);
 
     const images = dom.querySelectorAll('.image.thumbnail');
-    const randomImg = images[getRandomInt(0, images.length - 1)];
-    const src = randomImg.getAttribute('src').replace('thumb_', '').replace('https', 'http');
+    const randomImg = getRandomInt(0, images.length - 1);
+    const src = images[randomImg].getAttribute('src').replace('thumb_', '').replace('https', 'http');
 
-    bot.editMessageText(`${src}`, { chat_id: chatId, message_id: techMsg.message_id })
+    const report = [
+        `Выбрана картинка ${randomImg} на странице ${randomPage}`,
+        `https://${type}.${screencapsUrl}/thumbnails.php?album=${screencapsId}&page=${randomPage}`,
+        src
+    ]
 
-    bot.sendPhoto(chatId, `${screencapsUrl}/${src}`);
+    bot.editMessageText(report.join('\n'), { chat_id: chatId, message_id: techMsg.message_id })
+
+    bot.sendPhoto(chatId, `https://${type}.${screencapsUrl}/${src}`);
 }
 
 bot.onText(/\/start/, async (msg) => {
@@ -152,14 +158,15 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
     }
 
     if (action.indexOf('screencaps_') === 0) {
-        getScreencaps(chatId, action.replace('screencaps_', ''))
+        const vars = action.replace('screencaps_', '').split('_');
+        getScreencaps(chatId, vars[0], vars[1])
     }
 
     return bot.answerCallbackQuery(callbackQuery.id);
 });
 
 bot.onText(/\/rand/, async (msg) => {
-    console.log(msg)
+    // console.log(msg)
     const chatId = msg.chat.id;
     const text = msg.text;
     console.log(`Сделан запрос rand от чат айди ${chatId}`);
