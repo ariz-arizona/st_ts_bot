@@ -3074,103 +3074,128 @@
             [
                 {
                     "name": "Broken Bow",
-                    "link": "01.htm"
+                    "link": "01.htm",
+                    "screencapsAlbumId": "1"
                 },
                 {
                     "name": "Fight or Flight",
-                    "link": "03.htm"
+                    "link": "03.htm",
+                    "screencapsAlbumId": "2"
                 },
                 {
                     "name": "Strange New World",
-                    "link": "04.htm"
+                    "link": "04.htm",
+                    "screencapsAlbumId": "3"
                 },
                 {
                     "name": "Unexpected",
-                    "link": "05.htm"
+                    "link": "05.htm",
+                    "screencapsAlbumId": "4"
                 },
                 {
                     "name": "Terra Nova",
-                    "link": "06.htm"
+                    "link": "06.htm",
+                    "screencapsAlbumId": "5"
                 },
                 {
                     "name": "The Andorian Incident",
-                    "link": "07.htm"
+                    "link": "07.htm",
+                    "screencapsAlbumId": "6"
                 },
                 {
                     "name": "Breaking the Ice",
-                    "link": "08.htm"
+                    "link": "08.htm",
+                    "screencapsAlbumId": "7"
                 },
                 {
                     "name": "Civilization",
-                    "link": "09.htm"
+                    "link": "09.htm",
+                    "screencapsAlbumId": "8"
                 },
                 {
                     "name": "Fortunate Son",
-                    "link": "10.htm"
+                    "link": "10.htm",
+                    "screencapsAlbumId": "9"
                 },
                 {
                     "name": "Cold Front",
-                    "link": "11.htm"
+                    "link": "11.htm",
+                    "screencapsAlbumId": "10"
                 },
                 {
                     "name": "Silent Enemy",
-                    "link": "12.htm"
+                    "link": "12.htm",
+                    "screencapsAlbumId": "11"
                 },
                 {
                     "name": "Dear Doctor",
-                    "link": "13.htm"
+                    "link": "13.htm",
+                    "screencapsAlbumId": "12"
                 },
                 {
                     "name": "Sleeping Dogs",
-                    "link": "15.htm"
+                    "link": "15.htm",
+                    "screencapsAlbumId": "13"
                 },
                 {
                     "name": "Shadows of P'Jem",
-                    "link": "14.htm"
+                    "link": "14.htm",
+                    "screencapsAlbumId": "14"
                 },
                 {
                     "name": "Shuttlepod One",
-                    "link": "16.htm"
+                    "link": "16.htm",
+                    "screencapsAlbumId": "15"
                 },
                 {
                     "name": "Fusion",
-                    "link": "17.htm"
+                    "link": "17.htm",
+                    "screencapsAlbumId": "16"
                 },
                 {
                     "name": "Rogue Planet",
-                    "link": "18.htm"
+                    "link": "18.htm",
+                    "screencapsAlbumId": "17"
                 },
                 {
                     "name": "Acquisition",
-                    "link": "19.htm"
+                    "link": "19.htm",
+                    "screencapsAlbumId": "18"
                 },
                 {
                     "name": "Oasis",
-                    "link": "20.htm"
+                    "link": "20.htm",
+                    "screencapsAlbumId": "19"
                 },
                 {
                     "name": "Detained",
-                    "link": "21.htm"
+                    "link": "21.htm",
+                    "screencapsAlbumId": "20"
                 },
                 {
                     "name": "Vox Sola",
-                    "link": "22.htm"
+                    "link": "22.htm",
+                    "screencapsAlbumId": "21"
                 },
                 {
                     "name": "Fallen Hero",
-                    "link": "23.htm"
+                    "link": "23.htm",
+                    "screencapsAlbumId": "22"
                 },
                 {
                     "name": "Desert Crossing",
-                    "link": "24.htm"
+                    "link": "24.htm",
+                    "screencapsAlbumId": "23"
                 },
                 {
                     "name": "Two Day and Two Nights",
-                    "link": "25.htm"
+                    "link": "25.htm",
+                    "screencapsAlbumId": "24"
                 },
                 {
                     "name": "Shockwave part 1",
-                    "link": "26.htm"
+                    "link": "26.htm",
+                    "screencapsAlbumId": "25"
                 }
             ], 
             [
