@@ -119,6 +119,7 @@ const getScreencaps = async (chatId, screencapsId, type) => {
 }
 
 bot.onText(/\/start/, async (msg) => {
+    //todo проверить серию unimatriz 0 voy ++ Equinox Part 2
     const chatId = msg.chat.id;
     console.log(`Сделан запрос start от чат айди ${chatId}`);
     try {
