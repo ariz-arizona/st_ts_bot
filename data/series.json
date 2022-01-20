@@ -2299,7 +2299,8 @@
             [
                 {
                     "name": "Caretaker",
-                    "link": "101.htm"
+                    "link": "101.htm",
+                    "screencapsAlbumId": "3"
                 },
                 {
                     "name": "Parallax",
@@ -2569,401 +2570,499 @@
             [
                 {
                     "name": "Scorpion Part 2",
-                    "link": "321.htm#To%20be%20continued"
+                    "link": "321.htm#To%20be%20continued",
+                    "screencapsAlbumId": "4"
                 },
                 {
                     "name": "The Gift",
-                    "link": "401.htm"
+                    "link": "401.htm",
+                    "screencapsAlbumId": "5"
                 },
                 {
                     "name": "Day of Honor",
-                    "link": "403.htm"
+                    "link": "403.htm",
+                    "screencapsAlbumId": "6"
                 },
                 {
                     "name": "Nemesis",
-                    "link": "402.htm"
+                    "link": "402.htm",
+                    "screencapsAlbumId": "7"
                 },
                 {
                     "name": "Revulsion",
-                    "link": "404.htm"
+                    "link": "404.htm",
+                    "screencapsAlbumId": "8"
                 },
                 {
                     "name": "The Raven",
-                    "link": "405.htm"
+                    "link": "405.htm",
+                    "screencapsAlbumId": "9"
                 },
                 {
                     "name": "Scientific Method",
-                    "link": "406.htm"
+                    "link": "406.htm",
+                    "screencapsAlbumId": "10"
                 },
                 {
                     "name": "Year of Hell",
-                    "link": "407.htm"
+                    "link": "407.htm",
+                    "screencapsAlbumId": "11"
                 },
                 {
                     "name": "Random Thoughts",
-                    "link": "408.htm"
+                    "link": "408.htm",
+                    "screencapsAlbumId": "13"
                 },
                 {
                     "name": "Concerning Flight",
-                    "link": "409.htm"
+                    "link": "409.htm",
+                    "screencapsAlbumId": "14"
                 },
                 {
                     "name": "Mortal Coil",
-                    "link": "410.htm"
+                    "link": "410.htm",
+                    "screencapsAlbumId": "15"
                 },
                 {
                     "name": "Waking Moments",
-                    "link": "412.htm"
+                    "link": "412.htm",
+                    "screencapsAlbumId": "16"
                 },
                 {
                     "name": "Message in a Bottle",
-                    "link": "411.htm"
+                    "link": "411.htm",
+                    "screencapsAlbumId": "17"
                 },
                 {
                     "name": "Hunters",
-                    "link": "413.htm"
+                    "link": "413.htm",
+                    "screencapsAlbumId": "18"
                 },
                 {
                     "name": "Prey",
-                    "link": "414.htm"
+                    "link": "414.htm",
+                    "screencapsAlbumId": "19"
                 },
                 {
                     "name": "Retrospect",
-                    "link": "415.htm"
+                    "link": "415.htm",
+                    "screencapsAlbumId": "20"
                 },
                 {
                     "name": "The Killing Game",
-                    "link": "416.htm"
+                    "link": "416.htm",
+                    "screencapsAlbumId": "21"
                 },
                 {
                     "name": "Vis a Vis",
-                    "link": "417.htm"
+                    "link": "417.htm",
+                    "screencapsAlbumId": "23"
                 },
                 {
                     "name": "The Omega Directive",
-                    "link": "418.htm"
+                    "link": "418.htm",
+                    "screencapsAlbumId": "24"
                 },
                 {
                     "name": "Unforgettable",
-                    "link": "419.htm"
+                    "link": "419.htm",
+                    "screencapsAlbumId": "25"
                 },
                 {
                     "name": "Living Witness",
-                    "link": "420.htm"
+                    "link": "420.htm",
+                    "screencapsAlbumId": "26"
                 },
                 {
                     "name": "Demon",
-                    "link": "421.htm"
+                    "link": "421.htm",
+                    "screencapsAlbumId": "27"
                 },
                 {
                     "name": "One",
-                    "link": "422.htm"
+                    "link": "422.htm",
+                    "screencapsAlbumId": "28"
                 },
                 {
                     "name": "Hope and Fear",
-                    "link": "423.htm"
+                    "link": "423.htm",
+                    "screencapsAlbumId": "29"
                 }
             ],
             [
                 {
                     "name": "Night",
-                    "link": "501.htm"
+                    "link": "501.htm",
+                    "screencapsAlbumId": "30"
                 },
                 {
                     "name": "Drone",
-                    "link": "502.htm"
+                    "link": "502.htm",
+                    "screencapsAlbumId": "1"
                 },
                 {
                     "name": "Extreme Risk",
-                    "link": "503.htm"
+                    "link": "503.htm",
+                    "screencapsAlbumId": "31"
                 },
                 {
                     "name": "In the Flesh",
-                    "link": "504.htm"
+                    "link": "504.htm",
+                    "screencapsAlbumId": "32"
                 },
                 {
                     "name": "Once Upon a Time",
-                    "link": "505.htm"
+                    "link": "505.htm",
+                    "screencapsAlbumId": "33"
                 },
                 {
                     "name": "Timeless",
-                    "link": "507.htm"
+                    "link": "507.htm",
+                    "screencapsAlbumId": "34"
                 },
                 {
                     "name": "Infinite Regress",
-                    "link": "509.htm"
+                    "link": "509.htm",
+                    "screencapsAlbumId": "35"
                 },
                 {
                     "name": "Nothing Human",
-                    "link": "506.htm"
+                    "link": "506.htm",
+                    "screencapsAlbumId": "36"
                 },
                 {
                     "name": "Thirty Days",
-                    "link": "508.htm"
+                    "link": "508.htm",
+                    "screencapsAlbumId": "37"
                 },
                 {
                     "name": "Counterpoint",
-                    "link": "510.htm"
+                    "link": "510.htm",
+                    "screencapsAlbumId": "38"
                 },
                 {
                     "name": "Latent Image",
-                    "link": "512.htm"
+                    "link": "512.htm",
+                    "screencapsAlbumId": "39"
                 },
                 {
                     "name": "Bride of Chaotica",
-                    "link": "513.htm"
+                    "link": "513.htm",
+                    "screencapsAlbumId": "40"
                 },
                 {
                     "name": "Gravity",
-                    "link": "511.htm"
+                    "link": "511.htm",
+                    "screencapsAlbumId": "41"
                 },
                 {
                     "name": "Bliss",
-                    "link": "515.htm"
+                    "link": "515.htm",
+                    "screencapsAlbumId": "42"
                 },
                 {
                     "name": "Dark Frontier",
-                    "link": "517.htm"
+                    "link": "517.htm",
+                    "screencapsAlbumId": "2"
                 },
                 {
                     "name": "The Disease",
-                    "link": "516.htm"
+                    "link": "516.htm",
+                    "screencapsAlbumId": "43"
                 },
                 {
                     "name": "Course: Oblivion",
-                    "link": "518.htm"
+                    "link": "518.htm",
+                    "screencapsAlbumId": "44"
                 },
                 {
                     "name": "The Fight",
-                    "link": "514.htm"
+                    "link": "514.htm",
+                    "screencapsAlbumId": "45"
                 },
                 {
                     "name": "Think Tank",
-                    "link": "519.htm"
+                    "link": "519.htm",
+                    "screencapsAlbumId": "46"
                 },
                 {
                     "name": "Juggernaut",
-                    "link": "520.htm"
+                    "link": "520.htm",
+                    "screencapsAlbumId": "47"
                 },
                 {
                     "name": "Someone to Watch Over Me",
-                    "link": "521.htm"
+                    "link": "521.htm",
+                    "screencapsAlbumId": "48"
                 },
                 {
                     "name": "11:59",
-                    "link": "522.htm"
+                    "link": "522.htm",
+                    "screencapsAlbumId": "49"
                 },
                 {
                     "name": "Relativity",
-                    "link": "523.htm"
+                    "link": "523.htm",
+                    "screencapsAlbumId": "50"
                 },
                 {
                     "name": "Warhead",
-                    "link": "524.htm"
+                    "link": "524.htm",
+                    "screencapsAlbumId": "51"
                 },
                 {
                     "name": "Equinox Part I",
-                    "link": "525.htm"
+                    "link": "525.htm",
+                    "screencapsAlbumId": "52"
                 }
             ],
             [
                 {
                     "name": "Equinox Part 2",
-                    "link": "525.htm#To%20Be%20Continued..."
+                    "link": "525.htm#To%20Be%20Continued...",
+                    "screencapsAlbumId": "53"
                 },
                 {
                     "name": "Survival Instinct",
-                    "link": "601.htm"
+                    "link": "601.htm",
+                    "screencapsAlbumId": "54"
                 },
                 {
                     "name": "Barge of the Dead",
-                    "link": "602.htm"
+                    "link": "602.htm",
+                    "screencapsAlbumId": "55"
                 },
                 {
                     "name": "Tinker, Tenor, Doctor, Spy",
-                    "link": "603.htm"
+                    "link": "603.htm",
+                    "screencapsAlbumId": "56"
                 },
                 {
                     "name": "Alice",
-                    "link": "605.htm"
+                    "link": "605.htm",
+                    "screencapsAlbumId": "57"
                 },
                 {
                     "name": "Riddles",
-                    "link": "606.htm"
+                    "link": "606.htm",
+                    "screencapsAlbumId": "58"
                 },
                 {
                     "name": "Dragon's Teeth",
-                    "link": "604.htm"
+                    "link": "604.htm",
+                    "screencapsAlbumId": "59"
                 },
                 {
                     "name": "One Small Step",
-                    "link": "607.htm"
+                    "link": "607.htm",
+                    "screencapsAlbumId": "60"
                 },
                 {
                     "name": "The Voyager Conspiracy",
-                    "link": "608.htm"
+                    "link": "608.htm",
+                    "screencapsAlbumId": "61"
                 },
                 {
                     "name": "Pathfinder",
-                    "link": "609.htm"
+                    "link": "609.htm",
+                    "screencapsAlbumId": "62"
                 },
                 {
                     "name": "Fair Haven",
-                    "link": "610.htm"
+                    "link": "610.htm",
+                    "screencapsAlbumId": "63"
                 },
                 {
                     "name": "Blink of an Eye",
-                    "link": "612.htm"
+                    "link": "612.htm",
+                    "screencapsAlbumId": "64"
                 },
                 {
                     "name": "Virtuoso",
-                    "link": "613.htm"
+                    "link": "613.htm",
+                    "screencapsAlbumId": "65"
                 },
                 {
                     "name": "Memorial",
-                    "link": "615.htm"
+                    "link": "615.htm",
+                    "screencapsAlbumId": "66"
                 },
                 {
                     "name": "Tsunkatse",
-                    "link": "611.htm"
+                    "link": "611.htm",
+                    "screencapsAlbumId": "67"
                 },
                 {
                     "name": "Collective",
-                    "link": "614.htm"
+                    "link": "614.htm",
+                    "screencapsAlbumId": "68"
                 },
                 {
                     "name": "Spirit Folk",
-                    "link": "616.htm"
+                    "link": "616.htm",
+                    "screencapsAlbumId": "69"
                 },
                 {
                     "name": "Ashes to Ashes",
-                    "link": "617.htm"
+                    "link": "617.htm",
+                    "screencapsAlbumId": "70"
                 },
                 {
                     "name": "Child's Play",
-                    "link": "618.htm"
+                    "link": "618.htm",
+                    "screencapsAlbumId": "71"
                 },
                 {
                     "name": "Good Shepherd",
-                    "link": "619.htm"
+                    "link": "619.htm",
+                    "screencapsAlbumId": "72"
                 },
                 {
                     "name": "Live Fast and Prosper",
-                    "link": "621.htm"
+                    "link": "621.htm",
+                    "screencapsAlbumId": "73"
                 },
                 {
                     "name": "Muse",
-                    "link": "623.htm"
+                    "link": "623.htm",
+                    "screencapsAlbumId": "74"
                 },
                 {
                     "name": "Fury",
-                    "link": "620.htm"
+                    "link": "620.htm",
+                    "screencapsAlbumId": "75"
                 },
                 {
                     "name": "Life Line",
-                    "link": "622.htm"
+                    "link": "622.htm",
+                    "screencapsAlbumId": "76"
                 },
                 {
                     "name": "The Haunting of Deck Twelve",
-                    "link": "624.htm"
+                    "link": "624.htm",
+                    "screencapsAlbumId": "77"
                 },
                 {
                     "name": "Unimatrix Zero Part I",
-                    "link": "625.htm"
+                    "link": "625.htm",
+                    "screencapsAlbumId": "78"
                 }
             ],
             [
                 {
                     "name": "Unimatrix Zero Part II",
-                    "link": "625.htm#To%20be%20continued"
+                    "link": "625.htm#To%20be%20continued",
+                    "screencapsAlbumId": "79"
                 },
                 {
                     "name": "Imperfection",
-                    "link": "701.htm"
+                    "link": "701.htm",
+                    "screencapsAlbumId": "80"
                 },
                 {
                     "name": "Drive",
-                    "link": "702.htm"
+                    "link": "702.htm",
+                    "screencapsAlbumId": "81"
                 },
                 {
                     "name": "Repression",
-                    "link": "704.htm"
+                    "link": "704.htm",
+                    "screencapsAlbumId": "82"
                 },
                 {
                     "name": "Critical Care",
-                    "link": "703.htm"
+                    "link": "703.htm",
+                    "screencapsAlbumId": "83"
                 },
                 {
                     "name": "Inside Man",
-                    "link": "705.htm"
+                    "link": "705.htm",
+                    "screencapsAlbumId": "84"
                 },
                 {
                     "name": "Body and Soul",
-                    "link": "707.htm"
+                    "link": "707.htm",
+                    "screencapsAlbumId": "85"
                 },
                 {
                     "name": "Nightingale",
-                    "link": "708.htm"
+                    "link": "708.htm",
+                    "screencapsAlbumId": "86"
                 },
                 {
                     "name": "Flesh and Blood",
-                    "link": "706.htm"
+                    "link": "706.htm",
+                    "screencapsAlbumId": "87"
                 },
                 {
                     "name": "Shattered",
-                    "link": "709.htm"
+                    "link": "709.htm",
+                    "screencapsAlbumId": "88"
                 },
                 {
                     "name": "Lineage",
-                    "link": "710.htm"
+                    "link": "710.htm",
+                    "screencapsAlbumId": "89"
                 },
                 {
                     "name": "Repentance",
-                    "link": "711.htm"
+                    "link": "711.htm",
+                    "screencapsAlbumId": "90"
                 },
                 {
                     "name": "Prophecy",
-                    "link": "712.htm"
+                    "link": "712.htm",
+                    "screencapsAlbumId": "91"
                 },
                 {
                     "name": "The Void",
-                    "link": "713.htm"
+                    "link": "713.htm",
+                    "screencapsAlbumId": "92"
                 },
                 {
                     "name": "Workforce",
-                    "link": "714.htm"
+                    "link": "714.htm",
+                    "screencapsAlbumId": "93"
                 },
                 {
                     "name": "Human Error",
-                    "link": "715.htm"
+                    "link": "715.htm",
+                    "screencapsAlbumId": "95"
                 },
                 {
                     "name": "Q2",
-                    "link": "716.htm"
+                    "link": "716.htm",
+                    "screencapsAlbumId": "96"
                 },
                 {
                     "name": "Author, Author",
-                    "link": "717.htm"
+                    "link": "717.htm",
+                    "screencapsAlbumId": "97"
                 },
                 {
                     "name": "Friendship One",
-                    "link": "718.htm"
+                    "link": "718.htm",
+                    "screencapsAlbumId": "98"
                 },
                 {
                     "name": "Natural Law",
-                    "link": "719.htm"
+                    "link": "719.htm",
+                    "screencapsAlbumId": "99"
                 },
                 {
                     "name": "Homestead",
-                    "link": "720.htm"
+                    "link": "720.htm",
+                    "screencapsAlbumId": "100"
                 },
                 {
                     "name": "Renaissance Man",
-                    "link": "721.htm"
+                    "link": "721.htm",
+                    "screencapsAlbumId": "101"
                 },
                 {
                     "name": "Endgame",
-                    "link": "722.htm"
+                    "link": "722.htm",
+                    "screencapsAlbumId": "102"
                 }
             ]
         ]
