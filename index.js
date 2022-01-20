@@ -36,7 +36,7 @@ const getRandomSceneFull = async (chatId, randomSerial = false) => {
     const text = [
         `${serials[type].caption}`,
         `<b>Сезон: ${randomSeason + 1}</b>`,
-        `<b>Серия: ${randomLink + 1}</b>`,
+        // `<b>Серия: ${randomLink + 1}</b>`,
         `<b>Название:</b> ${name}`,
         `<a href="${url}"><b>Транскрипт</b></a>`,
     ];
@@ -48,7 +48,7 @@ const getRandomSceneFull = async (chatId, randomSerial = false) => {
 
     const scenes = dom.querySelectorAll('td[width="85%"] > *');
 
-    bot.editMessageText(`Выбрал случайную сцену`, { chat_id: chatId, message_id: techMsgId });
+    bot.editMessageText(`Выпала случайная сцена`, { chat_id: chatId, message_id: techMsgId });
 
     let randomScene, randomSceneText;
     let i = 0;
@@ -108,7 +108,7 @@ const getScreencaps = async (chatId, screencapsId, type) => {
     const src = images[randomImg].getAttribute('src').replace('thumb_', '').replace('https', 'http');
 
     const report = [
-        `Выбрана картинка ${randomImg} на странице ${randomPage}`,
+        `Выпала картинка ${randomImg} на странице ${randomPage}`,
         `https://${type}.${screencapsUrl}/thumbnails.php?album=${screencapsId}&page=${randomPage}`,
         src
     ]
